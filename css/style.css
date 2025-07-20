@@ -109,7 +109,7 @@ main {
     background-color: var(--background-grey);
     
     /* --- The Background Logo --- */
-    background-image: url('C:\Users\jacob\Downloads\gsac-website\images\ieee mb blue.png'); /* The path to your logo */
+    background-image: url('../images/ieee-mb-blue.png'); /* The path to your logo */
     background-repeat: no-repeat;
     background-position: center center; /* Centers the logo in the section */
     background-size: contain; /* Ensures the logo fits without being cropped */
@@ -200,7 +200,7 @@ footer {
 /* 6. Responsive Design (Mobile)      */
 /* ---------------------------------- */
 .hamburger {
-    display: none; /* Hidden by default on desktop */
+    display: none; /* Hidden by default on desktop */ 
     cursor: pointer;
 }
 
