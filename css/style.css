@@ -99,28 +99,42 @@ main {
     padding: 0 2rem;
 }
 
+/* MODIFIED: Replaced the hero-section rule to add a background logo */
 .hero-section {
     text-align: center;
     padding: 6rem 0;
-    background-color: var(--background-grey);
     border-radius: 8px;
     margin-top: 3rem;
+    position: relative; /* This is needed for the pseudo-element overlay */
+    background-color: var(--background-grey);
+    
+    /* --- The Background Logo --- */
+    background-image: url('../images/ieee_logo.png'); /* The path to your logo */
+    background-repeat: no-repeat;
+    background-position: center center; /* Centers the logo in the section */
+    background-size: contain; /* Ensures the logo fits without being cropped */
 }
 
-.hero-section h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+/* ADD THIS NEW RULE: Creates an overlay so text is readable */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(248, 249, 250, 0.85); /* A semi-transparent overlay of the background color */
+    border-radius: 8px;
+    z-index: 0;
 }
 
-.hero-section p {
-    font-size: 1.2rem;
-    color: var(--text-dark);
-    margin-bottom: 2rem;
-    max-width: 60ch; /* Limits line length for readability */
-    margin-left: auto;
-    margin-right: auto;
+/* ADD THIS NEW RULE: Makes sure the text stays on top of the overlay */
+.hero-section h1, 
+.hero-section p, 
+.hero-section .btn-primary {
+    position: relative;
+    z-index: 1;
 }
-
 .home-about-section {
     text-align: center;
     padding: 5rem 0;
