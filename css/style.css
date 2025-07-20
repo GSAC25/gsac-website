@@ -109,7 +109,7 @@ main {
     background-color: var(--background-grey);
     
     /* --- The Background Logo --- */
-    background-image: url('../images/ieee_logo.png'); /* The path to your logo */
+    background-image: url('../images/ieee logo.png'); /* The path to your logo */
     background-repeat: no-repeat;
     background-position: center center; /* Centers the logo in the section */
     background-size: contain; /* Ensures the logo fits without being cropped */
